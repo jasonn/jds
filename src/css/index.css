@@ -1269,6 +1269,71 @@ td .site-cell {
   .app-shell { grid-template-columns: 1fr; }
 }
 
+/* App Bar — horizontal top nav, an alternative to .nav-rail
+   when the app has few routes or a narrow vertical viewport. */
+.app-bar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.app-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-3);
+  height: 56px;
+  padding: 0 var(--s-4);
+}
+
+.app-bar-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+}
+
+.app-bar-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--s-1);
+}
+
+.app-bar-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px var(--s-3);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+}
+
+.app-bar-link:hover {
+  background: var(--bg-mute);
+  color: var(--text-primary);
+}
+
+.app-bar-link.active {
+  background: var(--bg-overlay);
+  color: var(--brand-500);
+  font-weight: 500;
+}
+
+.app-bar-link svg { width: 16px; height: 16px; }
+
+.app-bar-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+}
+
 /* Navigation Rail */
 .nav-rail {
   background: var(--bg-surface);

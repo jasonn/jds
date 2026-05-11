@@ -83,6 +83,9 @@ Tokens live in `src/css/tokens.css`. Grouped by purpose:
 
 Each status color has a matching `*-bg` token for tinted backgrounds (`--success-bg`, etc.).
 
+### Chart palette (categorical)
+`--chart-1` … `--chart-5` — purpose-neutral colors for data visualization where status colors don't apply. Define semantic aliases in your project (e.g. `--chart-revenue: var(--chart-1)`) rather than referencing the numbered tokens directly in components.
+
 ### Type scale
 `--text-xs` (12) · `--text-sm` (13) · `--text-base` (14) · `--text-md` (15) · `--text-lg` (17) · `--text-xl` (20) · `--text-2xl` (24) · `--text-3xl` (30) · `--text-4xl` (40) · `--text-display` (56)
 
@@ -110,6 +113,9 @@ When you need a component, check this catalog first. If something close exists, 
 | `.banner` / `.empty-state` | System feedback | Section 13, 19 |
 | `.calendar` / `.date-trigger` / `.time-input` | Date & time | Section 15 |
 | `.uploader` | File upload | Section 16 |
+| `.spinner` (+ `.spinner-sm` / `.spinner-lg` / `.indigo` / `.muted`) | Loading spinner | Section "Loading states" |
+| `.progress` + `.progress-bar` (+ `.indigo` / `.success` / `.indeterminate`) | Determinate / indeterminate progress | Section "Loading states" |
+| `.app-bar` + `.app-bar-inner` / `-brand` / `-nav` / `-link` / `-actions` | Horizontal top nav (alternative to `.nav-rail` for few-route apps) | Section "App shell" |
 | `.code-block` / `.code-inline` / `.code-cmd` / `.code-secret` | Code surfaces | Section 17 |
 | `.diff` / `.diff-split` | Diff viewer | Section 18 |
 | `.markdown` + `.callout-{note,tip,important,warning,caution}` | Markdown content | Section 25 |

@@ -65,6 +65,15 @@
   --info-500:    #5BA8FF;
   --info-bg:     rgba(91,168,255,0.10);
 
+  /* — Chart palette (categorical) ————————————
+     For data visualization where status colors don't apply.
+     Use semantic aliases in your project (--chart-protein: var(--chart-1) etc.). */
+  --chart-1: #5BA8FF;  /* blue */
+  --chart-2: #F5B544;  /* amber */
+  --chart-3: #EC4899;  /* pink */
+  --chart-4: #36C77B;  /* green */
+  --chart-5: #F2994A;  /* orange */
+
   /* — Elevation —————————————————————— */
   --shadow-xs:  0 1px 2px rgba(0,0,0,0.4);
   --shadow-sm:  0 2px 6px rgba(0,0,0,0.35), 0 1px 2px rgba(0,0,0,0.4);
@@ -152,6 +161,13 @@
   --warning-bg:  rgba(245,181,68,0.16);
   --danger-bg:   rgba(242,85,85,0.10);
   --info-bg:     rgba(91,168,255,0.10);
+
+  /* — Chart palette (darker variants for cream theme) — */
+  --chart-1: #2563EB;
+  --chart-2: #B8730A;
+  --chart-3: #DB2777;
+  --chart-4: #1A8754;
+  --chart-5: #C7702A;
 
   /* — Shadows (warm-tinted, low opacity) ————— */
   --shadow-xs:  0 1px 2px rgba(60,40,15,0.05);
