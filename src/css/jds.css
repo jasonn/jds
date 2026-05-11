@@ -1,0 +1,14 @@
+/* Jason's Personal Design System — full CSS bundle.
+ * Imports the design tokens first (variables must exist before any rules
+ * that reference them), then the components and patterns. Use this when
+ * loading the system into vanilla projects:
+ *
+ *   <link rel="stylesheet" href="./node_modules/jasons-design-system/dist/jds.css">
+ *
+ * Or, if you're bundling with Vite/webpack/etc.:
+ *
+ *   import 'jasons-design-system/css';
+ */
+
+@import "./tokens.css";
+@import "./index.css";

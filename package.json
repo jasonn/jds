@@ -1,0 +1,49 @@
+{
+  "name": "jasons-design-system",
+  "version": "1.3.0",
+  "description": "A token-first design system for personal projects. Dark-by-default, warm-cream light theme, optimized for technical interfaces.",
+  "type": "module",
+  "main": "./src/react/index.ts",
+  "types": "./src/react/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/react/index.ts",
+      "import": "./src/react/index.ts"
+    },
+    "./css": "./src/css/jds.css",
+    "./css/tokens": "./src/css/tokens.css",
+    "./css/index": "./src/css/index.css",
+    "./tailwind": "./src/tailwind/plugin.js",
+    "./tailwind/theme": "./src/tailwind/theme.css",
+    "./react": {
+      "types": "./src/react/index.ts",
+      "import": "./src/react/index.ts"
+    }
+  },
+  "files": [
+    "src/",
+    "reference/",
+    "examples/",
+    "prompts/",
+    "CLAUDE.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "design-system",
+    "css-variables",
+    "tokens",
+    "tailwindcss",
+    "react",
+    "dark-mode"
+  ],
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "peerDependenciesMeta": {
+    "react": { "optional": true },
+    "react-dom": { "optional": true }
+  },
+  "license": "MIT"
+}

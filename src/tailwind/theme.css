@@ -1,0 +1,97 @@
+/* ==========================================================================
+   TAILWIND v4 · @theme block
+   --------------------------------------------------------------------------
+   Tailwind v4 reads CSS variables declared inside @theme and generates
+   utility classes from them. Importing this file is all you need to get
+   bg-brand-500, text-text-primary, border-border-subtle, font-mono,
+   rounded-md, shadow-md, etc. — every JDS token becomes a Tailwind utility.
+   
+   Variables here SHADOW the JDS variables defined in tokens.css so that
+   Tailwind picks them up. Light-mode swapping still happens via the
+   [data-theme="light"] selector defined in tokens.css.
+   
+   Usage in your project's main CSS:
+   
+     @import "tailwindcss";
+     @import "jasons-design-system/css/tokens.css";
+     @import "jasons-design-system/tailwind/theme.css";
+     @import "jasons-design-system/css/index.css";
+   
+   Then in markup:
+   
+     <button class="bg-brand-500 text-text-inverse hover:bg-brand-600 ...">
+       Click me
+     </button>
+   ========================================================================== */
+
+@theme inline {
+  /* — Brand palette → bg-brand-500, text-brand-500, border-brand-500 — */
+  --color-brand-50:  var(--brand-50);
+  --color-brand-100: var(--brand-100);
+  --color-brand-200: var(--brand-200);
+  --color-brand-300: var(--brand-300);
+  --color-brand-400: var(--brand-400);
+  --color-brand-500: var(--brand-500);
+  --color-brand-600: var(--brand-600);
+  --color-brand-700: var(--brand-700);
+
+  /* — Secondary (indigo) — */
+  --color-secondary-50:  var(--secondary-50);
+  --color-secondary-100: var(--secondary-100);
+  --color-secondary-200: var(--secondary-200);
+  --color-secondary-300: var(--secondary-300);
+  --color-secondary-400: var(--secondary-400);
+  --color-secondary-500: var(--secondary-500);
+  --color-secondary-600: var(--secondary-600);
+  --color-secondary-700: var(--secondary-700);
+
+  /* — Surfaces — bg-bg-base, bg-bg-surface, etc. — */
+  --color-bg-base:    var(--bg-base);
+  --color-bg-surface: var(--bg-surface);
+  --color-bg-raised:  var(--bg-raised);
+  --color-bg-overlay: var(--bg-overlay);
+  --color-bg-inset:   var(--bg-inset);
+  --color-bg-input:   var(--bg-input);
+  --color-bg-code:    var(--bg-code);
+
+  /* — Borders — border-border-subtle, border-border-default, etc. — */
+  --color-border-subtle:  var(--border-subtle);
+  --color-border-default: var(--border-default);
+  --color-border-strong:  var(--border-strong);
+
+  /* — Text — text-text-primary, text-text-secondary, etc. — */
+  --color-text-primary:   var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary:  var(--text-tertiary);
+  --color-text-disabled:  var(--text-disabled);
+  --color-text-inverse:   var(--text-inverse);
+
+  /* — Status — text-success, bg-warning, etc. — */
+  --color-success: var(--success-500);
+  --color-warning: var(--warning-500);
+  --color-danger:  var(--danger-500);
+  --color-info:    var(--info-500);
+
+  /* — Fonts — font-sans, font-mono — */
+  --font-sans: 'Geist', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+
+  /* — Radius — rounded-xs, rounded-sm, rounded-md, rounded-lg, rounded-pill — */
+  --radius-xs:   3px;
+  --radius-sm:   5px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-xl:   16px;
+  --radius-pill: 9999px;
+
+  /* — Spacing — Tailwind has its own scale; JDS spacing is via --s-* and
+       remains usable via arbitrary values like p-[var(--s-4)]. Override
+       a few of the most-used sizes here if you want native utilities. — */
+
+  /* — Shadows — shadow-xs / sm / md / lg / glow — */
+  --shadow-xs:   var(--shadow-xs);
+  --shadow-sm:   var(--shadow-sm);
+  --shadow-md:   var(--shadow-md);
+  --shadow-lg:   var(--shadow-lg);
+  --shadow-glow: var(--shadow-glow);
+}

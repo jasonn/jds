@@ -1,0 +1,162 @@
+/* ==========================================================================
+   DESIGN TOKENS
+   The source of truth for every color, space, radius, and motion value in
+   the system. Tweak any --var here to retheme everything at once.
+   Dark mode is the default; the light theme overrides only what differs.
+   ========================================================================== */
+
+:root,
+[data-theme="dark"] {
+  /* — Brand —————————————————————————— */
+  --brand-50:  #FDF2F8;
+  --brand-100: #FCE7F3;
+  --brand-200: #FBCFE8;
+  --brand-300: #F9A8D4;
+  --brand-400: #F472B6;   /* hover */
+  --brand-500: #EC4899;   /* primary accent (Brand Pink) */
+  --brand-600: #DB2777;
+  --brand-700: #BE185D;
+  --brand-glow: 236, 72, 153;  /* rgb tuple for glows */
+
+  /* — Secondary —————————————————————— */
+  --secondary-50:  #EEF2FF;
+  --secondary-100: #E0E7FF;
+  --secondary-200: #C7D2FE;
+  --secondary-300: #A5B4FC;
+  --secondary-400: #818CF8;   /* hover */
+  --secondary-500: #6366F1;   /* secondary accent (Brand Indigo) */
+  --secondary-600: #4F46E5;
+  --secondary-700: #4338CA;
+  --secondary-glow: 99, 102, 241;
+  --secondary-bg:  rgba(99,102,241,0.10);
+  --secondary-border: rgba(99,102,241,0.28);
+
+  /* — Surface ————————————————————————— */
+  --bg-base:     #0B0B0D;       /* page background */
+  --bg-surface:  #131316;       /* cards */
+  --bg-raised:   #1A1A1F;       /* raised cards / modals */
+  --bg-overlay:  #22222A;       /* hover, selected rows */
+  --bg-inset:    #08080A;       /* console */
+  --bg-input:    #22222A;       /* form fields */
+  --bg-code:     #08080A;       /* code blocks, diffs */
+  --bg-chip:     #22222A;       /* language tag, small pills */
+  --bg-mute:     rgba(255,255,255,0.03);
+
+  /* — Borders ————————————————————————— */
+  --border-subtle: rgba(255,255,255,0.06);
+  --border-default: rgba(255,255,255,0.10);
+  --border-strong:  rgba(255,255,255,0.16);
+  --border-focus:   var(--brand-500);
+
+  /* — Text —————————————————————————— */
+  --text-primary:   #F4F4F5;
+  --text-secondary: #A1A1AA;
+  --text-tertiary:  #71717A;
+  --text-disabled:  #52525B;
+  --text-inverse:   #0B0B0D;
+
+  /* — Status (semantic) —————————————————— */
+  --success-500: #36C77B;
+  --success-bg:  rgba(54,199,123,0.10);
+  --warning-500: #F5B544;
+  --warning-bg:  rgba(245,181,68,0.10);
+  --danger-500:  #F25555;
+  --danger-bg:   rgba(242,85,85,0.10);
+  --info-500:    #5BA8FF;
+  --info-bg:     rgba(91,168,255,0.10);
+
+  /* — Elevation —————————————————————— */
+  --shadow-xs:  0 1px 2px rgba(0,0,0,0.4);
+  --shadow-sm:  0 2px 6px rgba(0,0,0,0.35), 0 1px 2px rgba(0,0,0,0.4);
+  --shadow-md:  0 8px 24px rgba(0,0,0,0.45), 0 2px 6px rgba(0,0,0,0.35);
+  --shadow-lg:  0 24px 60px rgba(0,0,0,0.55), 0 8px 24px rgba(0,0,0,0.40);
+  --shadow-glow: 0 0 0 1px rgba(var(--brand-glow), 0.35), 0 0 24px rgba(var(--brand-glow), 0.18);
+
+  /* — Radius —————————————————————————— */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-pill: 999px;
+
+  /* — Spacing (4px base) ————————————————— */
+  --s-1: 4px;   --s-2: 8px;   --s-3: 12px;  --s-4: 16px;
+  --s-5: 20px;  --s-6: 24px;  --s-7: 32px;  --s-8: 40px;
+  --s-9: 48px;  --s-10: 64px; --s-11: 80px; --s-12: 96px;
+
+  /* — Typography ———————————————————————— */
+  --font-sans: 'Geist', ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --text-xs:   11px;
+  --text-sm:   13px;
+  --text-base: 14px;
+  --text-md:   16px;
+  --text-lg:   18px;
+  --text-xl:   22px;
+  --text-2xl:  28px;
+  --text-3xl:  36px;
+  --text-4xl:  48px;
+  --text-display: 72px;
+
+  --leading-tight: 1.1;
+  --leading-snug:  1.3;
+  --leading-normal: 1.5;
+  --leading-loose: 1.7;
+
+  --tracking-tight:  -0.02em;
+  --tracking-normal:  0;
+  --tracking-wide:    0.04em;
+  --tracking-caps:    0.10em;
+
+  /* — Motion —————————————————————————— */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 120ms;
+  --dur-base: 200ms;
+  --dur-slow: 400ms;
+}
+
+[data-theme="light"] {
+  /* — Surfaces (warm paper) ————————————————— */
+  --bg-base:     #F5F1E8;       /* warm cream page bg */
+  --bg-surface:  #FBF8F0;       /* lifted card surface */
+  --bg-raised:   #FFFFFF;       /* modals, max lift */
+  --bg-overlay:  #ECE6D5;       /* hover, selected rows */
+  --bg-inset:    #DED4B8;       /* console */
+  --bg-input:    #F6F0E3;       /* form fields — lighter than overlay */
+  --bg-code:     #DED4B8;       /* code blocks, diffs */
+  --bg-chip:     #ECE6D5;       /* language tag, small pills */
+  --bg-mute:     rgba(60,40,15,0.04);
+
+  /* — Borders (warm subtle) ————————————————— */
+  --border-subtle:  rgba(60,40,15,0.08);
+  --border-default: rgba(60,40,15,0.14);
+  --border-strong:  rgba(60,40,15,0.22);
+
+  /* — Text (warm dark, not pure black) ——————— */
+  --text-primary:   #1F1B14;
+  --text-secondary: #5C5346;
+  --text-tertiary:  #857C6E;
+  --text-disabled:  #B5AC9D;
+  --text-inverse:   #FBF8F0;
+
+  /* — Status (slightly darker for legibility on cream) — */
+  --success-500: #1A8754;
+  --warning-500: #B8730A;
+  --danger-500:  #C53030;
+  --info-500:    #2563EB;
+  --success-bg:  rgba(54,199,123,0.14);
+  --warning-bg:  rgba(245,181,68,0.16);
+  --danger-bg:   rgba(242,85,85,0.10);
+  --info-bg:     rgba(91,168,255,0.10);
+
+  /* — Shadows (warm-tinted, low opacity) ————— */
+  --shadow-xs:  0 1px 2px rgba(60,40,15,0.05);
+  --shadow-sm:  0 1px 2px rgba(60,40,15,0.04), 0 2px 6px rgba(60,40,15,0.06);
+  --shadow-md:  0 2px 6px rgba(60,40,15,0.05), 0 8px 24px rgba(60,40,15,0.10);
+  --shadow-lg:  0 8px 24px rgba(60,40,15,0.10), 0 24px 60px rgba(60,40,15,0.14);
+  --shadow-glow: 0 0 0 1px rgba(var(--brand-glow), 0.45), 0 4px 12px rgba(var(--brand-glow), 0.18);
+}

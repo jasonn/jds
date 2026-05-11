@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hello from JDS</title>
+
+<!-- Geist font family (the system's UI typeface) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- JDS: tokens first, then components -->
+<link rel="stylesheet" href="../../src/css/tokens.css">
+<link rel="stylesheet" href="../../src/css/index.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-brand">
+    <div class="nav-brand-mark">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 7l8 5 8-5-8-5zM4 17l8 5 8-5M4 12l8 5 8-5"/></svg>
+    </div>
+    <span>My project</span>
+  </div>
+  <button class="theme-toggle" id="themeToggle">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+    <span id="themeLabel">Dark</span>
+  </button>
+</nav>
+
+<div class="shell">
+  <header class="hero">
+    <div class="hero-tag">
+      <span class="hero-tag-pill">STARTER</span>
+      <span>Built with Jason's Personal Design System</span>
+    </div>
+    <h1 class="hero-title">A blank canvas,<br/><em>already opinionated.</em></h1>
+    <p class="hero-lead">
+      You are looking at a project scaffold with JDS wired up — tokens, components, theme toggle.
+      Replace this hero with whatever you're building.
+    </p>
+  </header>
+
+  <section class="section">
+    <p class="section-eyebrow">Hello world</p>
+    <h2 class="section-title">A few components to prove it works</h2>
+
+    <div class="panel" style="margin-bottom: var(--s-4);">
+      <div class="panel-header">
+        <span class="panel-title">Forms</span>
+        <span class="panel-sub">Inputs · buttons · keys</span>
+      </div>
+      <div class="form">
+        <div class="field">
+          <label class="label" for="hello-name">Your name</label>
+          <div class="input-wrap">
+            <input class="input" id="hello-name" placeholder="Type something…" />
+            <span class="input-kbd-hint"><span class="kbd">⌘</span><span class="kbd">K</span></span>
+          </div>
+        </div>
+        <div class="row" style="justify-content: flex-end; gap: var(--s-2);">
+          <button class="btn btn-secondary">Cancel</button>
+          <button class="btn btn-primary">Save</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-header">
+        <span class="panel-title">Status</span>
+        <span class="panel-sub">Badges with dots</span>
+      </div>
+      <div class="row" style="gap: var(--s-3);">
+        <span class="badge badge-success live"><span class="badge-dot"></span>Active</span>
+        <span class="badge badge-info"><span class="badge-dot"></span>Building</span>
+        <span class="badge badge-warning"><span class="badge-dot"></span>Pending</span>
+        <span class="badge badge-danger"><span class="badge-dot"></span>Failed</span>
+        <span class="badge badge-neutral">v0.1.0</span>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+  // Theme toggle — 8 lines, no dependencies.
+  const root = document.documentElement;
+  const btn  = document.getElementById('themeToggle');
+  const lbl  = document.getElementById('themeLabel');
+  btn.addEventListener('click', () => {
+    const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    root.dataset.theme = next;
+    lbl.textContent = next === 'dark' ? 'Dark' : 'Light';
+  });
+</script>
+
+</body>
+</html>
